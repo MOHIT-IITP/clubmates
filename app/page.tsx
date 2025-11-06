@@ -29,7 +29,7 @@ export default function Home() {
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/dashboard"
+              href="/Select"
               className="px-8 py-4 bg-white shadow-xl  border border-slate-200 text-blue-500 font-semibold rounded-lg hover:bg-neutral-100 transition-colors"
             >
               Start Creating
