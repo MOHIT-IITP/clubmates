@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const page = () => {
   const [selected, setSelected] = useState<string | null>(null);
@@ -63,21 +64,36 @@ const page = () => {
             </div>
           </div>
 
-          <div className="flex justify-end px-8 pb-6">
-            <button
-              disabled={!selected}
-              aria-disabled={!selected}
-              onClick={handleNext}
-              className={`rounded-xl px-6 py-2 transition-colors font-medium ${
-                !selected
-                  ? "bg-gray-200 text-gray-500 cursor-not-allowed"
-                  : "bg-indigo-600 cursor-pointer text-white hover:bg-indigo-700"
-              }`}
-            >
-              NEXT
-            </button>
-          </div>
         </div>
+          <div className="flex justify-between items-center px-8  pb-6">
+            <div className="flex items-center mr-4">
+              <button
+                type="button"
+                onClick={() => router.push("/")}
+                aria-label="Go back"
+                className="group flex items-center gap-2 rounded-xl px-4 py-2 transition-all duration-150 ease-out bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+              >
+                <ArrowLeft className="h-5 w-5 text-slate-500 transition-colors duration-150 group-hover:text-indigo-600" />
+                <span className="text-sm font-medium">Back</span>
+              </button>
+            </div>
+            <div>
+              <button
+                type="button"
+                disabled={!selected}
+                aria-disabled={!selected}
+                onClick={handleNext}
+                className={`group flex items-center gap-2 rounded-xl px-4 py-2 transition-all duration-150 ease-out font-medium ${
+                  !selected
+                    ? "bg-gray-200 text-gray-500 cursor-not-allowed border border-slate-200"
+                    : "bg-indigo-600 text-white hover:bg-indigo-700 hover:shadow-md hover:-translate-y-0.5 border border-transparent"
+                } focus:outline-none focus:ring-2 focus:ring-indigo-300`}
+              >
+                <span className="text-sm font-medium">Next</span>
+                <ArrowRight className={`h-4 w-5 transition-colors duration-150 ${!selected ? 'text-gray-400' : 'text-white'}`} />
+              </button>
+            </div>
+          </div>
       </div>
     </div>
   );
