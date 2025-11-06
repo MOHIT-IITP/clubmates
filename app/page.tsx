@@ -6,7 +6,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="container mx-auto px-6 py-6 border-b border-slate-100">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold text-blue-600" style={{ fontFamily: "'Michroma', 'Poppins', Arial, Helvetica, sans-serif" }}>
+          <div className="text-xl font-bold text-blue-800" style={{ fontFamily: "'Michroma', 'Poppins', Arial, Helvetica, sans-serif" }}>
             CLUBMATES
           </div>
         </div>
@@ -17,7 +17,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h1
             style={{ fontFamily: "Michroma" }}
-            className="text-xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-br from-black via-blue-700 to-blue-400 bg-clip-text text-transparent"
+            className="text-xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-br from-black via-blue-800 to-blue-500 bg-clip-text text-transparent"
           >
             Create Beautiful Templates & Monthly Reports
           </h1>
@@ -30,7 +30,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/dashboard"
-              className="px-8 py-4 bg-white shadow-xl border-[1px] border-gray-100 text-blue-500 font-semibold rounded-lg hover:bg-neutral-100 transition-colors"
+              className="px-8 py-4 bg-white shadow-xl  border border-slate-200 text-blue-500 font-semibold rounded-lg hover:bg-neutral-100 transition-colors"
             >
               Start Creating
             </Link>
