@@ -25,7 +25,7 @@ const page = () => {
               onKeyDown={(e) => e.key === "Enter" && setSelected((s) => (s === "template" ? null : "template"))}
               className={`flex-1 flex flex-col justify-center items-start rounded-2xl border p-6 transition-transform duration-150 ease-in-out cursor-pointer ${
                 selected === "template"
-                  ? "shadow-lg bg-gray-100 text-black border-transparent"
+                  ? "shadow-lg bg-gray-100 border-2 border-red-100 text-black "
                   : "bg-white hover:shadow-md border-slate-200"
               }`}
             >
@@ -47,7 +47,7 @@ const page = () => {
               onKeyDown={(e) => e.key === "Enter" && setSelected((s) => (s === "report" ? null : "report"))}
               className={`flex-1 flex flex-col justify-center items-start rounded-2xl border p-6 transition-transform duration-150 ease-in-out cursor-pointer ${
                 selected === "report"
-                  ? "shadow-lg bg-gray-100 text-white border-transparent"
+                  ? "shadow-lg bg-gray-100 text-white border-2 border-red-100"
                   : "bg-white hover:shadow-md border-slate-200"
               }`}
             >
