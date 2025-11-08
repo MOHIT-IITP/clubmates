@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export default function Home() {
     return (
-        <div className="min-h-screen  bg-gradient-to-br dark:bg-white bg-black">
+        <div className="min-h-screen  bg-gradient-to-br dark:bg-gray-900 bg-white">
             {/* Navigation */}
             <nav className="container mx-auto px-6 py-6 border-b border-slate-100">
                 <div className="flex items-center justify-between">
-                    <div className="text-xl font-bold text-blue-800" style={{ fontFamily: "'Michroma', 'Poppins', Arial, Helvetica, sans-serif" }}>
+                    <div className="text-xl dark:text-blue-100 font-bold text-blue-800" style={{ fontFamily: "'Michroma', 'Poppins', Arial, Helvetica, sans-serif" }}>
                         CLUBMATES
                     </div>
                     <Profile/>
@@ -21,12 +21,12 @@ export default function Home() {
                 <div className="max-w-4xl mx-auto text-center">
                     <h1
                         style={{ fontFamily: "Michroma" }}
-                        className="text-xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-br from-black via-blue-800 to-blue-500 bg-clip-text text-transparent"
+                        className="text-xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-br from-black via-blue-800 to-blue-500 dark:from-blue-100 dark:via-blue-400 dark:to-blue-700 bg-clip-text text-transparent"
                     >
                         Create Beautiful Templates & Monthly Reports
                     </h1>
                     <p
-                        className="text-xl md:text-2xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                        className="text-xl md:text-2xl dark:text-slate-400 text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
                         Build professional templates and generate comprehensive end-of-month reports for anything. 
                         Simple, powerful, and designed for your workflow.
                     </p>
@@ -49,9 +49,9 @@ export default function Home() {
             </section>
 
             {/* Features Section */}
-            <section className="container mx-auto px-6 py-20 bg-slate-50">
+            <section className="container mx-auto px-6 py-20 dark:bg-gray-800 bg-slate-50">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-4xl font-bold text-center mb-16 text-slate-900">
+                    <h2 className="text-4xl font-bold text-center mb-16 dark:text-slate-100 text-slate-900">
                         Everything You Need
                     </h2>
                     <div className="grid md:grid-cols-3 gap-8">
