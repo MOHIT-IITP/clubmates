@@ -11,8 +11,10 @@ export default function Home() {
                     <div className="text-xl dark:text-blue-100 font-bold text-blue-800" style={{ fontFamily: "'Michroma', 'Poppins', Arial, Helvetica, sans-serif" }}>
                         CLUBMATES
                     </div>
+                    <div className="flex gap-10"> 
                     <Profile/>
                     <ModeToggle/>
+                    </div>
                 </div>
             </nav>
 

@@ -35,8 +35,8 @@ const ModeToggle = () => {
     }
   }
   return (
-    <button onClick={SWITCH} className=' border p-6  rounded-full shadow-lg size-8 border-gray-400 flex items-center justify-center '>
-      <MoonIcon size={28} className='rotate-0  scale-100 transition-all duration-200 dark:rotate-90 dark:scale-0 absolute  ' />
+    <button onClick={SWITCH} className=' border p-6  rounded-full shadow-lg border-gray-400 flex items-center justify-center '>
+      <MoonIcon size={28} className='rotate-0 text-gray-600  scale-100 transition-all duration-200 dark:rotate-90 dark:scale-0 absolute  ' />
       <SunIcon size={28} className=' text-white rotate-90 scale-0  transition-all duration-200 dark:rotate-0 dark:scale-100  absolute' />
     </button>
   )
