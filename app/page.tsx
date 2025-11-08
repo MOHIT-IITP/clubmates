@@ -1,8 +1,10 @@
 import Profile from "@/components/Profile";
+import ModeToggle from "@/components/ModeToggle";
 import Link from "next/link";
+
 export default function Home() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-blue-100">
+        <div className="min-h-screen  bg-gradient-to-br dark:bg-white bg-black">
             {/* Navigation */}
             <nav className="container mx-auto px-6 py-6 border-b border-slate-100">
                 <div className="flex items-center justify-between">
@@ -10,6 +12,7 @@ export default function Home() {
                         CLUBMATES
                     </div>
                     <Profile/>
+                    <ModeToggle/>
                 </div>
             </nav>
 
