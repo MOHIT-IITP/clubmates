@@ -1,20 +1,27 @@
 "use client";
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
+import { auth } from "@/lib/auth";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { isLogin } from "../actions/isLogin";
+const page =  () => {
 
-const page = () => {
-  const [selected, setSelected] = useState<string | null>(null);
-  const router = useRouter();
+      if(!isLogin()) redirect("/sign-in");
+      const [selected, setSelected] = useState<string | null>(null);
+       const router = useRouter();
+     
+       const handleNext = () => {
+         if (!selected) return;
+         if (selected === "template") router.push("/template");
+         else router.push("/report");
+       };
 
-  const handleNext = () => {
-    if (!selected) return;
-    if (selected === "template") router.push("/template");
-    else router.push("/report");
-  };
+
+
 
   return (
-    <div className="bg-gray-50 flex items-center justify-center w-screen min-h-screen p-6">
+        <div className="bg-gray-50 flex items-center justify-center w-screen min-h-screen p-6">
       <div className="max-w-4xl w-full md:w-3/4 lg:w-2/3 min-h-[48vh] relative rounded-3xl border-2 border-slate-200 bg-white shadow-sm">
         <div className="w-full h-full relative flex flex-col">
           <div className="flex flex-1 gap-6 px-10 py-8">

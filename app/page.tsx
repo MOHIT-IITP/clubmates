@@ -1,10 +1,14 @@
 import Profile from "@/components/Profile";
 import ModeToggle from "@/components/ModeToggle";
 import Link from "next/link";
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-    return (
-        <div className="min-h-screen  bg-gradient-to-br dark:bg-gray-900 bg-white">
+export default async function Home() {
+     const session = await auth();
+     // if(!session) redirect("/sign-in");
+     return (
+        <div className="min-h-screen  bg-gradient-to-br dark:bg-black bg-white">
             {/* Navigation */}
             <nav className="container mx-auto px-6 py-6 border-b border-slate-100">
                 <div className="flex items-center justify-between">
