@@ -117,8 +117,8 @@ const ReportEditor = () => {
           </Button>
         </div>
       </header>
-      <div className="w-full flex justify-center items-center">
-        <div>
+      <div className="w-full flex justify-center items-start">
+        <div className="w-1/2 ">
           {/* Editor Panel */}
           <div className="space-y-6">
             <div className="p-6">
@@ -257,7 +257,7 @@ const ReportEditor = () => {
             </Button>
           </div>
         </div>
-        <div className="lg:sticky lg:top-8 h-fit">
+        <div className="lg:sticky   h-fit w-2/3 lg:top-8">
           <div className="p-6">
             <h2
               style={{ fontFamily: "michroma" }}
