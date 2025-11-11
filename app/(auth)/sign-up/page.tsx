@@ -4,6 +4,7 @@ import Link from "next/link";
 import { GithubSignIn } from "@/components/github-sign-in";
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
+import { singUp } from "@/lib/actions";
 
 const Page = async () => {
     const session = await auth();
@@ -29,8 +30,12 @@ const Page = async () => {
       {/* Email/Password Sign Up */}
       <form
         className="space-y-4"
-        action={async () => {
+        action={async (formData:FormData) => {
           "use server";
+          const res=  await singUp(formData);
+          if(res.success){
+            redirect("/admin/dashboard")
+          }
         }}
       >
         <Input
