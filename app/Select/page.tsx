@@ -13,8 +13,8 @@ const page =  () => {
      
        const handleNext = () => {
          if (!selected) return;
-         if (selected === "template") router.push("/template");
-         else router.push("/report");
+         if (selected === "template") router.push("/Select/Template");
+         else router.push("/Select/Report");
        };
 
 

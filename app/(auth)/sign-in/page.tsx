@@ -12,8 +12,8 @@ const Page = async () => {
   return (
     <div className="w-full max-w-sm mx-auto mt-30 space-y-6 border p-10 rounded-lg shadow-lg ">
       <h1 className="text-2xl font-bold text-center mb-6">Sign In</h1>
-
       <GithubSignIn />
+
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <span className="w-full border-t" />
@@ -46,7 +46,7 @@ const Page = async () => {
           required
           autoComplete="current-password"
         />
-        <Button className="w-full  bg-white text-black" type="submit">
+        <Button className="w-full hover:border-white hover:text-white border border-dashed border-black bg-white text-black" type="submit">
           Sign In
         </Button>
       </form>

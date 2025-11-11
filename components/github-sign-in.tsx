@@ -11,7 +11,7 @@ const GithubSignIn = () => {
       }}
     >
       <Button
-       className="w-full bg-white text-black " >
+       className="w-full hover:text-white hover:border-white hover:bg-neutral-500 bg-white border border-gray-800 border-dashed shadow-md text-black " >
         <Github />
         Continue with GitHub
       </Button>
