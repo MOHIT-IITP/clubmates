@@ -1,24 +1,12 @@
-import { executeAction } from "./executeAction"
-import { schema } from "./schema";
-import {prisma}  from "./db"
+"use server";
 
-const singUp= async (formadata : FormData)=>{
-     return executeAction({
-          actionFn: async()=>{
-               const email = formadata.get("email");
-               const password = formadata.get("password");
-               const validateData = schema.parse({email,password});
+import { executeAction } from "./executeAction";
 
-               await prisma.user.create({
+const singUp = async (_formData: FormData) => {
+  return executeAction({
+    actionFn: async () => {},
+    successMessage: "Guest access is enabled. Redirecting you to the app.",
+  });
+};
 
-                    data: {
-                         email: validateData.email.toLowerCase(),
-                         password: validateData.password,
-                    }
-
-               })
-          }
-     })
-}
-
-export {singUp};
+export { singUp };

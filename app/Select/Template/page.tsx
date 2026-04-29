@@ -1,9 +1,20 @@
-import React from 'react'
+import ReportEditor from "@/components/ReportEditor";
 
 const page = () => {
   return (
-    <div className='flex justify-center items-center w-full h-full'>welcome to template Generator</div>
-  )
-}
+    <div className="w-full h-full relative">
+      <nav className="w-full flex items-center bg-neutral-200 justify-around left-0 h-20">
+        <h1 className="text-2xl font-semibold" style={{ fontFamily: "michroma" }}>
+          Template Generator
+        </h1>
+      </nav>
+      <div className="flex justify-center items-center">
+        <div className="bg-neutral-100 flex justify-center items-center rounded-xl m-2 w-full h-full border border-neutral-200">
+          <ReportEditor />
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default page
+export default page;

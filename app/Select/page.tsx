@@ -1,22 +1,17 @@
 "use client";
-import { redirect } from "next/navigation";
-import { auth } from "@/lib/auth";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { isLogin } from "../actions/isLogin";
-const page =  () => {
 
-      if(!isLogin()) redirect("/sign-in");
-      const [selected, setSelected] = useState<string | null>(null);
-       const router = useRouter();
-     
-       const handleNext = () => {
-         if (!selected) return;
-         if (selected === "template") router.push("/Select/Template");
-         else router.push("/Select/Report");
-       };
+const Page = () => {
+  const [selected, setSelected] = useState<string | null>(null);
+  const router = useRouter();
 
+  const handleNext = () => {
+    if (!selected) return;
+    if (selected === "template") router.push("/Select/Template");
+    else router.push("/Select/Report");
+  };
 
 
 
@@ -106,4 +101,4 @@ const page =  () => {
   );
 };
 
-export default page;
+export default Page;

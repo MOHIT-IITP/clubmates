@@ -1,69 +1,69 @@
-import { GithubSignIn } from "@/components/github-sign-in";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { auth, signIn } from "@/lib/auth";
-import { executeAction } from "@/lib/executeAction";
-import Link from "next/link";
-import { redirect } from "next/navigation";
+// import { GithubSignIn } from "@/components/github-sign-in";
+// import { Button } from "@/components/ui/button";
+// import { Input } from "@/components/ui/input";
+// import { auth, signIn } from "@/lib/auth";
+// import { executeAction } from "@/lib/executeAction";
+// import Link from "next/link";
+// import { redirect } from "next/navigation";
 
-const Page = async () => {
-  const session = await auth();
-  if (session) redirect("/admin/dashboard");
+// const Page = async () => {
+//   const session = await auth();
+//   if (session) redirect("/admin/dashboard");
 
-  return (
-    <div className="w-full max-w-sm mx-auto mt-30 space-y-6 border p-10 rounded-lg shadow-lg ">
-      <h1 className="text-2xl font-bold text-center mb-6">Sign In</h1>
-      <GithubSignIn />
+//   return (
+//     <div className="w-full max-w-sm mx-auto mt-30 space-y-6 border p-10 rounded-lg shadow-lg ">
+//       <h1 className="text-2xl font-bold text-center mb-6">Sign In</h1>
+//       <GithubSignIn />
 
-      <div className="relative">
-        <div className="absolute inset-0 flex items-center">
-          <span className="w-full border-t" />
-        </div>
-        <div className="relative flex justify-center text-sm">
-          <span className="bg-background px-2 text-muted-foreground">
-            Or continue with email
-          </span>
-        </div>
-      </div>
+//       <div className="relative">
+//         <div className="absolute inset-0 flex items-center">
+//           <span className="w-full border-t" />
+//         </div>
+//         <div className="relative flex justify-center text-sm">
+//           <span className="bg-background px-2 text-muted-foreground">
+//             Or continue with email
+//           </span>
+//         </div>
+//       </div>
 
-      {/* Email/Password Sign In */}
-      <form
-        className="space-y-4"
-        action={async (formData:FormData) => {
-          "use server";
-          await executeAction({
-            actionFn: async() =>{
-              await signIn("credentials",formData)
-            }
-          })
-        }}
-      >
-        <Input
-          name="email"
-          placeholder="Email"
-          type="email"
-          required
-          autoComplete="email"
-        />
-        <Input
-          name="password"
-          placeholder="Password"
-          type="password"
-          required
-          autoComplete="current-password"
-        />
-        <Button className="w-full hover:border-white hover:text-white border border-dashed border-black bg-white text-black" type="submit">
-          Sign In
-        </Button>
-      </form>
+//       {/* Email/Password Sign In */}
+//       <form
+//         className="space-y-4"
+//         action={async (formData:FormData) => {
+//           "use server";
+//           await executeAction({
+//             actionFn: async() =>{
+//               await signIn("credentials",formData)
+//             }
+//           })
+//         }}
+//       >
+//         <Input
+//           name="email"
+//           placeholder="Email"
+//           type="email"
+//           required
+//           autoComplete="email"
+//         />
+//         <Input
+//           name="password"
+//           placeholder="Password"
+//           type="password"
+//           required
+//           autoComplete="current-password"
+//         />
+//         <Button className="w-full hover:border-white hover:text-white border border-dashed border-black bg-white text-black" type="submit">
+//           Sign In
+//         </Button>
+//       </form>
 
-      <div className="text-center">
-        <Button asChild variant="link">
-          <Link href="/sign-up">Don&apos;t have an account? Sign up</Link>
-        </Button>
-      </div>
-    </div>
-  );
-};
+//       <div className="text-center">
+//         <Button asChild variant="link">
+//           <Link href="/sign-up">Don&apos;t have an account? Sign up</Link>
+//         </Button>
+//       </div>
+//     </div>
+//   );
+// };
 
-export default Page;
+// export default Page;

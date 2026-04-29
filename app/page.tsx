@@ -1,11 +1,11 @@
-import Profile from "@/components/Profile";
+// import Profile from "@/components/Profile";
 import ModeToggle from "@/components/ModeToggle";
 import Link from "next/link";
-import { auth } from "@/lib/auth";
+// import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
-     const session = await auth();
+    //  const session = await auth();
      // if(!session) redirect("/sign-in");
      return (
         <div className="min-h-screen  bg-gradient-to-br dark:bg-black bg-white">
@@ -16,7 +16,7 @@ export default async function Home() {
                         CLUBMATES
                     </div>
                     <div className="flex gap-10"> 
-                    <Profile/>
+                    {/* <Profile/> */}
                     <ModeToggle/>
                     </div>
                 </div>
